@@ -159,7 +159,8 @@ namespace Cau_1
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn có muốn thoát không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
         }
     }
 }
